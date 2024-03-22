@@ -43,7 +43,7 @@ cd Long-CLIP
 Then, download the checkpoints of our model [LongCLIP-B](https://huggingface.co/BeichenZhang/LongCLIP-B) and/or [LongCLIP-L](https://huggingface.co/BeichenZhang/LongCLIP-L) and place it under `./checkpoints`
 
 ```python
-from longclip import longclip
+from model import longclip
 import torch
 from PIL import Image
 
@@ -86,7 +86,7 @@ cd eval/retrieval
 python coco.py
 ```
 
-##   ⭐ Demos
+## ⭐ Demos
 ### Long-caption text-image retrieval 
 <p align="center"> <a>  
 <img src="./img/retrieval.png"  width="900" />
