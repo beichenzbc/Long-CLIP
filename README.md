@@ -1,9 +1,8 @@
 # Long-CLIP
 This repository is the official implementation of Long-CLIP
 
-Long-CLIP: Unlocking the Long-Text Capability of CLIP
-\
-Beichen Zhang, Pan Zhang, Xiaoyi Dong, Yuhang Zang, Jiaqi Wang
+**Long-CLIP: Unlocking the Long-Text Capability of CLIP**\
+[Beichen Zhang](https://github.com/beichenzbc), [Pan Zhang](https://panzhang0212.github.io/), [Xiaoyi Dong](https://lightdxy.github.io/), [Yuhang Zang](https://yuhangzang.github.io/), [Jiaqi Wang](https://myownskyw7.github.io/)
 
 ## 💡 Highlights
 - 🔥 **Long Input length** Increase the maximum input length of CLIP from **77** to **248**.
@@ -13,9 +12,9 @@ Beichen Zhang, Pan Zhang, Xiaoyi Dong, Yuhang Zang, Jiaqi Wang
 
 ## 📜 News
 
-🚀 [2024/3/25] The paper is released!
+🚀 [2024/3/25] The paper(https://arxiv.org/abs/) is released!
 
-🚀 [2024/3/24] The The [Inference code](https://arxiv.org/abs/2312.03818) and models ([LongCLIP-B](https://huggingface.co/BeichenZhang/LongCLIP-B) and [LongCLIP-L](https://huggingface.co/BeichenZhang/LongCLIP-L)) are released!
+🚀 [2024/3/25] The The Inference code and models ([LongCLIP-B](https://huggingface.co/BeichenZhang/LongCLIP-B) and [LongCLIP-L](https://huggingface.co/BeichenZhang/LongCLIP-L)) are released!
 
 
 ## 👨‍💻 Todo
