@@ -12,9 +12,7 @@ This repository is the official implementation of Long-CLIP
 
 ## 📜 News
 
-🚀 [2024/3/25] The The Inference code and models ([LongCLIP-B](https://huggingface.co/BeichenZhang/LongCLIP-B) and [LongCLIP-L](https://huggingface.co/BeichenZhang/LongCLIP-L)) are released!
-
-🚀 [2024/3/25] The [paper](https://arxiv.org/abs/) is released!
+🚀 [2024/3/23] The The Inference code and models ([LongCLIP-B](https://huggingface.co/BeichenZhang/LongCLIP-B) and [LongCLIP-L](https://huggingface.co/BeichenZhang/LongCLIP-L)) are released!
 
 ## 👨‍💻 Todo
 - [ ] Training code for Long-CLIP based on OpenAI-CLIP
