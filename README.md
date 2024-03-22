@@ -77,8 +77,8 @@ python imagenet.py
 Similarly, run the following command for cifar datset
 ```shell
 cd eval/classification/cifar
-python cifar10.py   #cifar10
-python cifar100.py  #cifar100
+python cifar10.py               #cifar10
+python cifar100.py              #cifar100
 ```
 
 #### Retrieval
