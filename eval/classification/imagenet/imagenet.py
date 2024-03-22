@@ -59,7 +59,7 @@ def main(args):
 
 if __name__ == "__main__":
     args = argparse.ArgumentParser(description='CLIP inference')
-    args.add_argument('-d', '--data-dir', default='/mnt/petrelfs/share_data/zhangbeichen/imagenet/imagenet/val/', type=str,
+    args.add_argument('-d', '--data-dir', default='data/imagenet/val/', type=str,
                       help='dataset path (default: None)')
     args.add_argument('-w', '--num-workers', default=8, type=int,
                       help='number of workers (default: 64)')

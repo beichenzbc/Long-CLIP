@@ -30,7 +30,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 model, preprocess = longclip.load("../../../checkpoints/longclip-B.pt", device=device)
 model.eval()
 
-testset = torchvision.datasets.CIFAR100(root="/mnt/petrelfs/zhangbeichen/dataset_beichen", train=False, download=True)
+testset = torchvision.datasets.CIFAR100(root="data/cifar100", train=False, download=True)
 testloader = torch.utils.data.DataLoader(testset, batch_size=32, shuffle=True, num_workers=8)
 
 text_feature = zeroshot_classifier(model, testset.classes, imagenet_templates)

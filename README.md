@@ -65,6 +65,29 @@ with torch.no_grad():
 print("Label probs:", probs) # prints: [[0.982  0.01799]]
 ```
 
+### Evaluation
+#### Zero-shot classification
+
+To run zero-shot classification on imagenet dataset, run the following command after preparing the data
+```shell
+cd eval/classification/imagenet
+python imagenet.py
+```
+
+Similarly, run the following command for cifar datset
+```shell
+cd eval/classification/cifar
+python cifar10.py   #cifar10
+python cifar100.py  #cifar100
+```
+
+#### Retrieval
+To run text-image retrieval on COCO2017, run the following command after preparing the data
+```shell
+cd eval/retrieval
+python coco.py
+```
+
 ##   ⭐ Demos
 ### Long-caption text-image retrieval 
 <p align="center"> <a>  
