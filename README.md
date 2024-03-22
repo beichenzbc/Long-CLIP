@@ -1,1 +1,77 @@
 # Long-CLIP
+This repository is the official implementation of Long-CLIP
+
+Long-CLIP: Unlocking the Long-Text Capability of CLIP
+\
+Beichen Zhang, Pan Zhang, Xiaoyi Dong, Yuhang Zang, Jiaqi Wang
+
+## 💡 Highlights
+- 🔥 **Long Input length** Increase the maximum input length of CLIP from **77** to **248**.
+- 🔥 **Strong Performace** Improve the R@5 of long-caption text-image retrieval by **20%** and traditional text-image retrieval by **6%**.
+- 🔥 **Plug-in and play** Can be directly applied in **any work** that requires long-text capability.
+
+
+## 📜 News
+
+🚀 [2024/3/25] The paper is released!
+
+🚀 [2024/3/24] The The [Inference code](https://arxiv.org/abs/2312.03818) and models ([LongCLIP-B](https://huggingface.co/BeichenZhang/LongCLIP-B) and [LongCLIP-L](https://huggingface.co/BeichenZhang/LongCLIP-L)) are released!
+
+
+## 👨‍💻 Todo
+- [ ] Training code for Long-CLIP based on OpenAI-CLIP
+- [x] Evaluation code for Long-CLIP
+- [x] evaluation code for zero-shot classification and text-image retrieval tasks.
+- [x] Usage example of Long-CLIP
+- [x] Checkpoints of Long-CLIP
+
+
+## 🛠️ Usage
+
+### Installation
+
+Our model is based on [CLIP](https://github.com/openai/CLIP), please prepare environment for CLIP.
+
+
+### how to use
+
+Please first clone our [repo](https://github.com/beichenzbc/Long-CLIP) from github by running the following command.
+
+```shell
+git clone https://github.com/beichenzbc/Long-CLIP.git
+cd Long-CLIP
+```
+
+Then, download the checkpoints of our model [LongCLIP-B](https://huggingface.co/BeichenZhang/LongCLIP-B) and/or [LongCLIP-L](https://huggingface.co/BeichenZhang/LongCLIP-L) and place it under `./checkpoints`
+
+```python
+from longclip import longclip
+import torch
+from PIL import Image
+
+device = "cuda" if torch.cuda.is_available() else "cpu"
+model, preprocess = longclip.load("./checkpoints/longclip-B.pt", device=device)
+
+text = longclip.tokenize(["A man is crossing the street with a red car parked nearby.", "A man is driving a car in an urban scene."]).to(device)
+image = preprocess(Image.open("./img/demo.png")).unsqueeze(0).to(device)
+
+with torch.no_grad():
+    image_features = model.encode_image(image)
+    text_features = model.encode_text(text)
+    
+    logits_per_image, logits_per_text = model(image, text)
+    probs = logits_per_image.softmax(dim=-1).cpu().numpy()
+
+print("Label probs:", probs) # prints: [[0.982  0.01799]]
+```
+
+##   ⭐ Demos
+### Long-caption text-image retrieval 
+<p align="center"> <a>  
+<img src="./img/retrieval.png"  width="900" />
+</a> </p>
+
+### Plug-and-Play text to image generation 
+<p align="center"> <a>  
+<img src="./img/generation.png"  width="900" />
+</a> </p>
