@@ -80,10 +80,11 @@ python cifar100.py              #cifar100
 ```
 
 #### Retrieval
-To run text-image retrieval on COCO2017, run the following command after preparing the data
+To run text-image retrieval on COCO2017 or Flickr30k, run the following command after preparing the data
 ```shell
 cd eval/retrieval
-python coco.py
+python coco.py                  #COCO2017
+python flickr30k.py             #Flickr30k
 ```
 
 ## ⭐ Demos
