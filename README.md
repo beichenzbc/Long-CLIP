@@ -1,7 +1,7 @@
 # Long-CLIP
 This repository is the official implementation of Long-CLIP
 
-**Long-CLIP: Unlocking the Long-Text Capability of CLIP**\
+**[Long-CLIP: Unlocking the Long-Text Capability of CLIP](https://arxiv.org/abs/2403.15378)**\
 [Beichen Zhang](https://github.com/beichenzbc), [Pan Zhang](https://panzhang0212.github.io/), [Xiaoyi Dong](https://lightdxy.github.io/), [Yuhang Zang](https://yuhangzang.github.io/), [Jiaqi Wang](https://myownskyw7.github.io/)
 
 ## 💡 Highlights
@@ -11,8 +11,9 @@ This repository is the official implementation of Long-CLIP
 
 
 ## 📜 News
+🚀 [2024/3/25] Our paper [Long-CLIP: Unlocking the Long-Text Capability of CLIP](https://arxiv.org/abs/2403.15378) is released!
 
-🚀 [2024/3/23] The The Inference code and models ([LongCLIP-B](https://huggingface.co/BeichenZhang/LongCLIP-B) and [LongCLIP-L](https://huggingface.co/BeichenZhang/LongCLIP-L)) are released!
+🚀 [2024/3/23] The Inference code and models ([LongCLIP-B](https://huggingface.co/BeichenZhang/LongCLIP-B) and [LongCLIP-L](https://huggingface.co/BeichenZhang/LongCLIP-L)) are released!
 
 ## 👨‍💻 Todo
 - [ ] Training code for Long-CLIP based on OpenAI-CLIP
