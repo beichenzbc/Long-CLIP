@@ -96,3 +96,13 @@ python flickr30k.py             #Flickr30k
 <p align="center"> <a>  
 <img src="./img/generation.png"  width="900" />
 </a> </p>
+
+## ✒️ Citation
+If you find our work helpful for your research, please consider giving a star ⭐ and citation 📝
+```bibtex
+@article{zhang2024longclip,
+      title={Long-CLIP: Unlocking the Long-Text Capability of CLIP}, 
+      author={Beichen Zhang, Pan Zhang, Xiaoyi Dong, Yuhang Zang, Jiaqi Wang},
+      year={2024},
+      journal={arXiv preprint arXiv:2403.15378},
+}
