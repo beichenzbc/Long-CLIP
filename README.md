@@ -1,8 +1,8 @@
 # Long-CLIP
 This repository is the official implementation of Long-CLIP
 
-**[Long-CLIP: Unlocking the Long-Text Capability of CLIP](https://arxiv.org/abs/2403.15378)**\
-[Beichen Zhang](https://github.com/beichenzbc), [Pan Zhang](https://panzhang0212.github.io/), [Xiaoyi Dong](https://lightdxy.github.io/), [Yuhang Zang](https://yuhangzang.github.io/), [Jiaqi Wang](https://myownskyw7.github.io/)
+**Long-CLIP: Unlocking the Long-Text Capability of CLIP**\
+[Beichen Zhang](https://beichenzbc.github.io), [Pan Zhang](https://panzhang0212.github.io/), [Xiaoyi Dong](https://lightdxy.github.io/), [Yuhang Zang](https://yuhangzang.github.io/), [Jiaqi Wang](https://myownskyw7.github.io/)
 
 ## 💡 Highlights
 - 🔥 **Long Input length** Increase the maximum input length of CLIP from **77** to **248**.
@@ -11,12 +11,14 @@ This repository is the official implementation of Long-CLIP
 
 
 ## 📜 News
-🚀 [2024/3/25] Our paper [Long-CLIP: Unlocking the Long-Text Capability of CLIP](https://arxiv.org/abs/2403.15378) is released!
+🚀 [2024/4/1] The training code is released!
 
-🚀 [2024/3/23] The Inference code and models ([LongCLIP-B](https://huggingface.co/BeichenZhang/LongCLIP-B) and [LongCLIP-L](https://huggingface.co/BeichenZhang/LongCLIP-L)) are released!
+🚀 [2024/3/25] The Inference code and models ([LongCLIP-B](https://huggingface.co/BeichenZhang/LongCLIP-B) and [LongCLIP-L](https://huggingface.co/BeichenZhang/LongCLIP-L)) are released!
+
+🚀 [2024/3/25] The [paper](https://arxiv.org/abs/) is released!
 
 ## 👨‍💻 Todo
-- [ ] Training code for Long-CLIP based on OpenAI-CLIP
+- [x] Training code for Long-CLIP based on OpenAI-CLIP
 - [x] Evaluation code for Long-CLIP
 - [x] evaluation code for zero-shot classification and text-image retrieval tasks.
 - [x] Usage example of Long-CLIP
@@ -85,6 +87,8 @@ cd eval/retrieval
 python coco.py                  #COCO2017
 python flickr30k.py             #Flickr30k
 ```
+### Traning
+Please refer to `train/train.md` for training details.
 
 ## ⭐ Demos
 ### Long-caption text-image retrieval 
@@ -96,13 +100,3 @@ python flickr30k.py             #Flickr30k
 <p align="center"> <a>  
 <img src="./img/generation.png"  width="900" />
 </a> </p>
-
-## ✒️ Citation
-If you find our work helpful for your research, please consider giving a star ⭐ and citation 📝
-```bibtex
-@article{zhang2024longclip,
-      title={Long-CLIP: Unlocking the Long-Text Capability of CLIP}, 
-      author={Beichen Zhang, Pan Zhang, Xiaoyi Dong, Yuhang Zang, Jiaqi Wang},
-      year={2024},
-      journal={arXiv preprint arXiv:2403.15378},
-}

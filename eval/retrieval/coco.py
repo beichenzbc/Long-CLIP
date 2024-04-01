@@ -9,10 +9,9 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 model, preprocess = longclip.load("../../checkpoints/longclip-B.pt", device=device)
 
 model.eval()
-# 加载COCO数据集
+
 coco = CocoCaptions(root="data/coco/val2017/", annFile="data/coco/annotations/captions_val2017.json", transform=None)
 
-# 提取图像和文本特征
 image_features = []
 text_features = []
 pred_true = 0

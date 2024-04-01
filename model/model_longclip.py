@@ -253,7 +253,8 @@ class CLIP(nn.Module):
                  vocab_size: int,
                  transformer_width: int,
                  transformer_heads: int,
-                 transformer_layers: int
+                 transformer_layers: int, 
+                 load_from_clip: bool
                  ):
         super().__init__()
 
@@ -288,8 +289,14 @@ class CLIP(nn.Module):
 
         self.vocab_size = vocab_size
         self.token_embedding = nn.Embedding(vocab_size, transformer_width)
-        self.positional_embedding = nn.Parameter(torch.empty(248, transformer_width))
-        self.positional_embedding_res = nn.Parameter(torch.empty(248, transformer_width))
+
+        if load_from_clip == False:
+            self.positional_embedding = nn.Parameter(torch.empty(248, transformer_width))
+            self.positional_embedding_res = nn.Parameter(torch.empty(248, transformer_width))
+
+        else:
+            self.positional_embedding = nn.Parameter(torch.empty(77, transformer_width))
+
         self.ln_final = LayerNorm(transformer_width)
 
         self.text_projection = nn.Parameter(torch.empty(transformer_width, embed_dim))
@@ -420,7 +427,7 @@ def convert_weights(model: nn.Module):
     model.apply(_convert_weights_to_fp16)
 
 
-def build_model(state_dict: dict):
+def build_model(state_dict: dict, load_from_clip: bool):
     vit = "visual.proj" in state_dict
 
     if vit:
@@ -448,7 +455,7 @@ def build_model(state_dict: dict):
     model = CLIP(
         embed_dim,
         image_resolution, vision_layers, vision_width, vision_patch_size,
-        context_length, vocab_size, transformer_width, transformer_heads, transformer_layers
+        context_length, vocab_size, transformer_width, transformer_heads, transformer_layers, load_from_clip
     )
 
     for key in ["input_resolution", "context_length", "vocab_size"]:
