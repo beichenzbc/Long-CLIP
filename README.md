@@ -100,3 +100,14 @@ Please refer to `train/train.md` for training details.
 <p align="center"> <a>  
 <img src="./img/generation.png"  width="900" />
 </a> </p>
+
+
+## Citation
+If you find our work helpful for your research, please consider giving a citation:
+```
+@article{zhang2024longclip,
+        title={Long-CLIP: Unlocking the Long-Text Capability of CLIP},
+        author={Beichen Zhang and Pan Zhang and Xiaoyi Dong and Yuhang Zang and Jiaqi Wang},
+        journal={arXiv preprint arXiv:2403.15378},
+        year={2024}
+}
