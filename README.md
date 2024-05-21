@@ -11,6 +11,8 @@ This repository is the official implementation of Long-CLIP
 
 
 ## 📜 News
+🚀 [2024/5/21] Urban-1k: a scaling-up version of Urban-200 dataset in the paper has been released at this [page](https://huggingface.co/datasets/BeichenZhang/Urban1k).
+
 🚀 [2024/4/1] The training code is released!
 
 🚀 [2024/3/25] The Inference code and models ([LongCLIP-B](https://huggingface.co/BeichenZhang/LongCLIP-B) and [LongCLIP-L](https://huggingface.co/BeichenZhang/LongCLIP-L)) are released!
