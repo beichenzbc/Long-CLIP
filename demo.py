@@ -12,7 +12,7 @@ with torch.no_grad():
     image_features = model.encode_image(image)
     text_features = model.encode_text(text)
     
-    logits_per_image, logits_per_text = model(image, text)
+    logits_per_image = image_features @ text_features.T
     probs = logits_per_image.softmax(dim=-1).cpu().numpy()
 
 print("Label probs:", probs) 
