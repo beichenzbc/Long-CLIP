@@ -11,7 +11,7 @@ This repository is the official implementation of Long-CLIP
 
 
 ## 📜 News
-🚀 [2024/5/21] We update the paper and checkpoints after fixing the bug in DDP and add results in Urban-1k. Special thanks to @MajorDavidZhang for finding and refining this bug in DDP!
+🚀 [2024/5/21] We update the paper and checkpoints after fixing the bug in DDP and add results in Urban-1k. Special thanks to @MajorDavidZhang for finding and refining this bug in DDP! Now the fine-tuning only takes ***0.5*** hours on *8 GPUs*!
 
 🚀 [2024/5/21] Urban-1k: a scaling-up version of Urban-200 dataset in the paper has been released at this [page](https://huggingface.co/datasets/BeichenZhang/Urban1k).
 
