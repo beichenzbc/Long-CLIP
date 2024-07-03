@@ -11,6 +11,8 @@ This repository is the official implementation of Long-CLIP
 
 
 ## 📜 News
+🚀 [2024/7/1] We release the code of using Long-CLIP in ***SDXL***. For detailed information, you may refer to `SDXL/SDXL.md`.
+
 🚀 [2024/5/21] We update the paper and checkpoints after fixing the bug in DDP and add results in Urban-1k. Special thanks to @MajorDavidZhang for finding and refining this bug in DDP! Now the fine-tuning only takes ***0.5*** hours on *8 GPUs*!
 
 🚀 [2024/5/21] Urban-1k: a scaling-up version of Urban-200 dataset in the paper has been released at this [page](https://huggingface.co/datasets/BeichenZhang/Urban1k).
@@ -95,6 +97,11 @@ python flickr30k.py             #Flickr30k
 Please refer to `train/train.md` for training details.
 
 ## ⭐ Demos
+### Long-CLIP-SDXL
+<p align="center"> <a>  
+<img src="./img/demo_SDXL.png"  width="900" />
+</a> </p>
+
 ### Long-caption text-image retrieval 
 <p align="center"> <a>  
 <img src="./img/retrieval.png"  width="900" />
@@ -115,3 +122,4 @@ If you find our work helpful for your research, please consider giving a citatio
         journal={arXiv preprint arXiv:2403.15378},
         year={2024}
 }
+```
