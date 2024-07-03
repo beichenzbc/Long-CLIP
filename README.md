@@ -11,7 +11,9 @@ This repository is the official implementation of Long-CLIP
 
 
 ## 📜 News
-🚀 [2024/7/1] We release the code of using Long-CLIP in ***SDXL***. For detailed information, you may refer to `SDXL/SDXL.md`.
+🚀 [2024/7/3] Our paper has been accepted by ***ECCV2024***.
+
+🚀 [2024/7/3] We release the code of using Long-CLIP in ***SDXL***. For detailed information, you may refer to `SDXL/SDXL.md`.
 
 🚀 [2024/5/21] We update the paper and checkpoints after fixing the bug in DDP and add results in Urban-1k. Special thanks to @MajorDavidZhang for finding and refining this bug in DDP! Now the fine-tuning only takes ***0.5*** hours on *8 GPUs*!
 
