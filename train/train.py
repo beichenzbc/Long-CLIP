@@ -152,7 +152,7 @@ class CLIP_Clean_Train():
             if step < start_iter:
                 continue
             #images = images.cuda()
-            images_short = images.clone()
+            #images_short = images.clone()
             texts = longclip.tokenize(texts, truncate=True).cuda()
             short_text = longclip.tokenize(short_text, truncate=True).cuda()
             self.scheduler(step)
