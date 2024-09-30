@@ -39,25 +39,27 @@ This repository is the official implementation of Long-CLIP
 
 Our model is based on [CLIP](https://github.com/openai/CLIP), please prepare environment for CLIP.
 
-
-### how to use
-
-Please first clone our [repo](https://github.com/beichenzbc/Long-CLIP) from github by running the following command.
+Next, clone our [repo](https://github.com/beichenzbc/Long-CLIP) from Github by running the following command.
 
 ```shell
 git clone https://github.com/beichenzbc/Long-CLIP.git
 cd Long-CLIP
 ```
 
-Then, download the checkpoints of our model [LongCLIP-B](https://huggingface.co/BeichenZhang/LongCLIP-B) and/or [LongCLIP-L](https://huggingface.co/BeichenZhang/LongCLIP-L) and place it under `./checkpoints`
+### how to use
+
+Then, download the checkpoints of our model [LongCLIP-B](https://huggingface.co/BeichenZhang/LongCLIP-B) and/or [LongCLIP-L](https://huggingface.co/BeichenZhang/LongCLIP-L) from 🤗 Hugging Face as shown below:
 
 ```python
 from model import longclip
 import torch
 from PIL import Image
+from huggingface_hub import hf_hub_download
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
-model, preprocess = longclip.load("./checkpoints/longclip-B.pt", device=device)
+# here we download LongCLIP-L
+filepath = hf_hub_download(repo_id="BeichenZhang/LongCLIP-L", filename="longclip-L.pt")
+model, preprocess = longclip.load(filepath, device=device)
 
 text = longclip.tokenize(["A man is crossing the street with a red car parked nearby.", "A man is driving a car in an urban scene."]).to(device)
 image = preprocess(Image.open("./img/demo.png")).unsqueeze(0).to(device)
