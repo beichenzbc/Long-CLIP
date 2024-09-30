@@ -39,17 +39,16 @@ This repository is the official implementation of Long-CLIP
 
 Our model is based on [CLIP](https://github.com/openai/CLIP), please prepare environment for CLIP.
 
-
-### how to use
-
-Please first clone our [repo](https://github.com/beichenzbc/Long-CLIP) from github by running the following command.
+Next, clone our [repo](https://github.com/beichenzbc/Long-CLIP) from Github by running the following command.
 
 ```shell
 git clone https://github.com/beichenzbc/Long-CLIP.git
 cd Long-CLIP
 ```
 
-Then, download the checkpoints of our model [LongCLIP-B](https://huggingface.co/BeichenZhang/LongCLIP-B) and/or [LongCLIP-L](https://huggingface.co/BeichenZhang/LongCLIP-L) as shown below:
+### how to use
+
+Then, download the checkpoints of our model [LongCLIP-B](https://huggingface.co/BeichenZhang/LongCLIP-B) and/or [LongCLIP-L](https://huggingface.co/BeichenZhang/LongCLIP-L) from 🤗 Hugging Face as shown below:
 
 ```python
 from model import longclip
